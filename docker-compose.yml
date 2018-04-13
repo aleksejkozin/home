@@ -2,10 +2,9 @@ version: '3'
 
 services:
   debian-base:
-    build: ./debian-base.docker
-    image: debian-base
+    image: ntoss/debian-base
   proxy-service:
-    build: ./proxy.docker
+    image: ntoss/proxy-service
     ports:
       - 1010:1085
     restart: always
