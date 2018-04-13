@@ -7,7 +7,7 @@ services:
   proxy-service:
     build: ./proxy.docker
     ports:
-      - 1488:1085
+      - 1010:1085
     restart: always
     environment:
       - PROXY_USERNAME=${PROXY_USERNAME}
