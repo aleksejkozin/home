@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  debian-base:
+    build: ./debian-base.docker
+    image: debian-base
+  proxy-service:
+    build: ./proxy.docker
+    ports:
+      - 1488:1085
+    restart: always
+    environment:
+      - PROXY_USERNAME=${PROXY_USERNAME}
+      - PROXY_PASSWORD=${PROXY_PASSWORD}
+    depends_on:
+      - debian-base
