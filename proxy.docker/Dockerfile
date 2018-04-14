@@ -1,4 +1,4 @@
-FROM ntoss/debian-base
+FROM debian-base
 
 COPY sockd.conf /etc/
 
